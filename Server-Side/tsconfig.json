@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "target": "es6",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noImplicitAny": false,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "baseUrl": "./",
+        "rootDirs": [".", "Server-Side/src"],
+        "paths": {
+            "*": [
+                "node_modules/*",
+                "Server-Side/src/types/*"            ]
+        },
+    },
+    
+    "include": [
+        "Server-Side/src/**/*",
+        "Server-Side/src/util/*.d.ts"
+    ]
+}

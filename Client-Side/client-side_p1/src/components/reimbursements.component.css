@@ -1,0 +1,10 @@
+#reimbursements-header {
+    background-color: var(--dark);
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#reimbursements-header > button {
+    font-size: 0.5rem;
+}
