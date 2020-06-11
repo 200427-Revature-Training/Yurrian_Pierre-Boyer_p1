@@ -15,7 +15,7 @@ export function getUserRoleById(user_role_id: number): Promise<User[]> {
 }
 
 /* Returns a certain user by username*/
-export function getUserByName(ers_username: string): Promise<User> {
+export function getUserByUserName(ers_username: string): Promise<User> {
 
-    return usersDao.getUserByName(ers_username);
+    return usersDao.getUserByUserName(ers_username);
 }

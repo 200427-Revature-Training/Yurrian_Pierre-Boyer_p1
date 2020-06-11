@@ -44,23 +44,23 @@ usersRouter.get('/userRoleId/:userRoleId', (request, response, next) => {
 });
 
 /* 
-    GET http://localhost:3000/users/
-    Retrieves food from the database by id and its type id
-    If the person does not exist, sends 404 
+    GET http://localhost:3000/users/ersUserName/:ersUserName
+    Retrieves user from the database by username
+    If the User does not exist, sends 404 
     
 */
-// usersRouter.get('/foodName/:foodName', (request, response, next) => {
-//     const foodName = (request.params.foodName);
-//         foodService.getFoodByName(foodName).then(foodName => {
-//             if (!foodName) {
-//                 response.sendStatus(404);
-//             } else {
-//                 response.json(foodName);
-//             }
-//             next();
-//         }).catch(err => {
-//             console.log(err);
-//             response.sendStatus(500);
-//             next();
-//         })
-// });
+usersRouter.get('/ersUserName/:ersUserName', (request, response, next) => {
+    const ersUserName = (request.params.ersUserName);
+        usersService.getUserByUserName(ersUserName).then(ersUserName => {
+            if (!ersUserName) {
+                response.sendStatus(404);
+            } else {
+                response.json(ersUserName);
+            }
+            next();
+        }).catch(err => {
+            console.log(err);
+            response.sendStatus(500);
+            next();
+        })
+});

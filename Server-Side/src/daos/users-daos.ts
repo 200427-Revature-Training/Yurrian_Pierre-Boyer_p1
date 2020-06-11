@@ -20,7 +20,7 @@ export function getUserRoleById(user_role_id: number): Promise<User[]> {
     });    
 }
 
-export function getUserByName(ers_username: string): Promise<User> {
+export function getUserByUserName(ers_username: string): Promise<User> {
     const sql = `SELECT * FROM ers_users WHERE ers_username = $1`;
 
     return db.query<UserRow>(sql, [ers_username])

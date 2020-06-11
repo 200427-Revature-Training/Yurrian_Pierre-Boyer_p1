@@ -22,6 +22,7 @@
     "typescript": "^3.9.3"
   },
   "dependencies": {
+    "@types/jsonwebtoken": "^8.5.0",
     "@types/passport": "^1.0.3",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",

@@ -8,4 +8,4 @@ export const db = new Pool({
     password: process.env.NODE_APP_PASS
 });
 
-//module.exports = { Pool };
+//module.exports = db;

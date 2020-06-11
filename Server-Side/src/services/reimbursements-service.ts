@@ -36,9 +36,9 @@ export function saveReimbursement(reimbursement: any): Promise<Reimbursement> {
         undefined,
         reimbursement.reimbDescription,
         undefined,
-        reimbursement.reimbAuthor,
+        reimbursement.reimbAuthor, //This must be known from login
         undefined,
-        reimbursement.reimbStatusId,
+        reimbursement.reimbStatusId, //Hardcode Pending (1)
         reimbursement.reimbTypeId
     );
 
