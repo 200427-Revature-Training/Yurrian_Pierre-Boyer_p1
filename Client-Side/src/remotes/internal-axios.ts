@@ -5,4 +5,8 @@ const server = !process.env.NODE_ENV || process.env.NODE_ENV == 'development' ?
 
 export const internalAxios = Axios.create({
     baseURL: server
+    // baseURL: 'http://localhost:5000',
+    // headers: {
+    //     Authorization: 'Bearer' 
+    // }
 });

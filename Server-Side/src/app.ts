@@ -34,17 +34,6 @@ app.use('/dashboard', require('./config/dashboard'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-// /*
-//     Authentication (Testing, Organize Later)
-// */
-// app.get('/users', (req, res) => {
-  
-// })
-
-// app.post('/login', (req, res) => {
-//   // Authenticate User
-// })
-
 
 process.on('unhandledRejection', () => {
     db.end().then(() => {

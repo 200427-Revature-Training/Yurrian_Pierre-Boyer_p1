@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import * as reimbursementsRemote from '../remotes/reimbursements.remote';
-import { Reimbursement } from '../models/Reimbursement';
+import * as reimbursementsRemote from '../../remotes/reimbursements.remote';
+import { Reimbursement } from '../../models/Reimbursement';
 import './reimbursements.component.css';
 import { Modal, Button, Form } from 'react-bootstrap';
+
 
 export const ReimbursementsComponent: React.FC = () => {
     const [reimbursements, setReimbursements] = useState<Reimbursement[]>([]);
@@ -105,6 +106,7 @@ export const ReimbursementsComponent: React.FC = () => {
                         <th scope="col">Author</th>
                         <th scope="col">Status</th>
                         <th scope="col">Type</th>
+                        <th scope="col">Action</th>
 
                     </tr>
                 </thead>
@@ -120,13 +122,20 @@ export const ReimbursementsComponent: React.FC = () => {
                             <td>{u.reimbAuthor}</td>
                             <td>{u.reimbStatusId}</td>
                             <td>{u.reimbTypeId}</td>
+                            <td> <button 
+                                    className="btn btn-warning"
+                                    onClick={() => setModalVisible(true)}
+                                    >Edit</button>
+                                
+                            </td>
                         </tr>)
                     })}
                 </tbody>
             </table>
 
+ 
             {/* react-bootstrap components */}
-            <Modal show={modalVisible} onHide={() => setModalVisible(false)}>
+             <Modal show={modalVisible} onHide={() => setModalVisible(false)}>
                 <Modal.Header>
                     <Modal.Title>New Reimbursement</Modal.Title>
                 </Modal.Header>
@@ -162,7 +171,7 @@ export const ReimbursementsComponent: React.FC = () => {
                     <Button onClick={() => setModalVisible(false)}>Close</Button>
                     <Button onClick={() => addReimbursement()}>Submit</Button>
                 </Modal.Footer>
-            </Modal>
+            </Modal> 
 
             {/* Plain Bootstrap Components */}
             {/* <div className="modal fade" id="add-user-modal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

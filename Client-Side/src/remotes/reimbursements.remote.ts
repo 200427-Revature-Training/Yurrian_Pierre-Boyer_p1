@@ -9,7 +9,18 @@ export const getAllReimbursements = async () => {
     });
 }
 
+export const getOneReimbursement = async () => {
+    const response = await internalAxios.get<Reimbursement>('/reimbursements');
+        return true;
+}
+
 export const createReimbursement = async (reimbursement: Reimbursement) => {
     const response = await internalAxios.post('/reimbursements', reimbursement);
     return true;
 }
+
+export const patchReimbursement = async (reimbursement: Reimbursement) => {
+    const response = await internalAxios.patch('/reimbursements', reimbursement);
+    return true;
+}
+

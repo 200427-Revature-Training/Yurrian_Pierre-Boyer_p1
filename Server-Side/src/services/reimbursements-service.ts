@@ -29,6 +29,7 @@ export function getReimbursementsByStatusId(reimb_status_id: number): Promise<Re
 /* Saves the Reimbursement  */
 export function saveReimbursement(reimbursement: any): Promise<Reimbursement> {
 
+    //For all Reimbursements
     const newReimbursement = new Reimbursement(
         undefined,
         reimbursement.reimbAmount,
@@ -38,7 +39,7 @@ export function saveReimbursement(reimbursement: any): Promise<Reimbursement> {
         undefined,
         reimbursement.reimbAuthor, //This must be known from login
         undefined,
-        reimbursement.reimbStatusId, //Hardcode Pending (1)
+        1, //reimbursement.reimbStatusId, //Hardcode Pending (1)
         reimbursement.reimbTypeId
     );
 

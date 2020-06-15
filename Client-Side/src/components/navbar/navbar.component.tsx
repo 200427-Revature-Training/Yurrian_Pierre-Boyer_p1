@@ -29,7 +29,7 @@ const NavbarComponent: React.FC<RouteComponentProps> = (props) => {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item active">
-                        <Link to="/home">Home {renderOnCurrentPath('/home') }</Link>
+                        <Link to="/home">Login {renderOnCurrentPath('/home') }</Link>
                     </li>
                     <li className="nav-item">
                         <Link to="/reimbursements">Reimbursements {renderOnCurrentPath('/reimbursements') }</Link>
